@@ -1,0 +1,11 @@
+{
+  "name": "playwright-workflow",
+  "version": "1.0.0",
+  "description": "Playwright Tests mit Screenshots",
+  "scripts": {
+    "test": "playwright test"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.48.0"
+  }
+}
