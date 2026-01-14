@@ -1,1 +1,22 @@
+name: Test Workflow
+on:
+  push: 
+  workflow_dispatch:  # Ermöglicht manuelles Auslösen
 
+jobs:
+  test:
+    runs-on:  ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses:  actions/checkout@v4
+      
+    - name: Setup Node. js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20'
+        
+    - name:  Test installation
+      run: |
+        node --version
+        npm --version
+        echo "Workflow läuft erfolgreich!"
